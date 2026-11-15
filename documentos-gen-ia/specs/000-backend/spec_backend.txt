@@ -1,0 +1,15 @@
+Quiero que planifiques colocar  un backend, para ello debes usar la estructura de autenticación de Laravel
+Puedes usar Laravel Breeze con blade. Además debes colocar todo lo desarrollado, es decir, el crud de 'authors' dentro de ese backend. 
+De ser necesario:
+* Crea migrations, model, factories y Seeder si aplica
+* Crea Form Requests para store y update
+* Crea Controller siguiendo buenas prácticas Laravel
+
+Inserta sólo un users
+usuario= jctp
+email= torreal@hotmail.com
+password=12345678
+El campo password debes guardarlo encriptado
+
+Escribe el plan en un archivo llamado plan.md en la carpeta C:\inetpub\wwwroot\app2\documentos-gen-ia\specs\000-backend para luego se ejecutado.
+No olvides escribir en el plan que debe escribir un archivo llamado tasks.md en la carpeta C:\inetpub\wwwroot\app2\documentos-gen-ia\specs\000-backend donde debe escribir las tareas hechas y verificadas.

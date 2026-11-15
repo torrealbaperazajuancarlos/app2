@@ -1,0 +1,14 @@
+************
+** Inicio **
+************
+** Primero debemos crear el repositorio en Github privado o publico con https://github.com/new  una vez nos hayamos identificado
+
+Hay que crear el archivo .gitignore y colocar que ignore .env
+
+git init -b main
+git add .
+git commit -m "Primer commit"
+git remote add origin https://github.com/torrealbaperazajuancarlos/app2.git
+git push -u origin main
+
+

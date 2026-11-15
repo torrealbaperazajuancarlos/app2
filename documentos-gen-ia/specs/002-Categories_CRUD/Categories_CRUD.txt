@@ -1,0 +1,140 @@
+Quiero que planifiques un CRUD completo para la entidad `categories` en este proyecto Laravel 13.
+
+Contexto importante:
+
+* Este proyecto ya tiene convenciones, AGENTS.md, skills y configuración de OpenCode. Debes respetarlas.
+* Todo el código, nombres técnicos, rutas, clases, variables, componentes y textos del sistema deben estar en inglés.
+* La explicación hacia mí debe ser en español.
+* No quiero una implementación solo funcional: quiero una UI cuidada, moderna y consistente con el starter kit.
+
+Objetivo:
+Crear un módulo completo de `categories` con backend + frontend + navegación integrada al dashboard existente.
+
+Entidad:
+
+* `categories`
+
+* Campos:
+  * `id`
+  * `name`; required|string|max:255 ; placeholder="Título de la categoría"
+
+Backend:
+
+* Crear migración `categories`
+* Crear Model, Factory y Seeder si aplica
+* Crear Form Requests para store y update
+* Crear Controller siguiendo buenas prácticas Laravel
+* Implementar acciones RESTful para:
+  * index
+  * create
+  * store
+  * edit
+  * update
+  * destroy
+* Definir rutas limpias y consistentes
+
+
+Frontend:
+* Crear páginas Inertia React para:
+  * categories index
+  * categories create
+  * categories edit
+* Usar componentes existentes del proyecto antes de crear nuevos
+* Mantener tipado limpio y consistente
+* Usar Wayfinder si el proyecto ya lo está usando
+
+Requisitos obligatorios de navegación y dashboard:
+* Integrar el módulo dentro del dashboard/layout existente del starter kit
+* Agregar el item de menú o navegación para `categories` en el sidebar o navegación principal, respetando la estructura actual del proyecto
+* El ítem de navegación debe verse correctamente en light y dark mode
+* Debe quedar integrado como una sección real del panel, no como una pantalla aislada
+
+Requisitos obligatorios de UI/UX:
+* La interfaz debe verse moderna, limpia y profesional
+* Debe funcionar bien en light mode y dark mode
+* Debe respetar el diseño base del starter kit
+* Cuidar especialmente:
+  * márgenes externos
+  * paddings internos
+  * separación entre secciones
+  * ancho máximo de contenedores
+  * jerarquía visual de títulos, subtítulos y acciones
+* No quiero una UI “cruda” ni pegada a los bordes
+* Quiero pantallas con buen aire visual y espaciado consistente
+* Usa cards, headers de sección, acciones alineadas y distribución prolija
+* Mantén buena legibilidad y contraste en ambos temas
+
+
+Pantalla Index:
+
+* Debe tener un header claro con título, descripción breve y acción principal
+* Mostrar listado en una tabla bien diseñada
+* La tabla debe tener espaciado, alineación y estilos prolijos
+* Incluir columnas:
+  * Name
+* Los botones de acciones deben verse bien y estar alineados
+* Agregar estado vacío elegante si no hay categories
+* Agregar feedback visual claro si hay datos o no hay datos
+* Si el starter kit ya tiene patrones de toolbar, cards o table wrappers, reutilizarlos
+
+Create y Edit:
+* Los formularios deben estar dentro de una card o contenedor visual agradable
+* Deben tener labels, placeholders si corresponde, mensajes de error y buen espaciado
+* Los campos deben estar bien distribuidos visualmente
+* Usar una composición limpia y profesional, no un formulario básico sin estructura
+* Agregar acciones claras:
+  * Save
+  * Cancel
+* El botón principal debe destacar correctamente
+* El botón de cancelar debe volver al listado o usar el patrón existente del proyecto
+
+Modales y acciones:
+* No quiero eliminación brusca con confirm del navegador
+* Para delete, usar un modal de confirmación reutilizable si ya existe uno en el proyecto
+* Si no existe, crear uno consistente con el diseño actual
+* El modal debe verse bien en light/dark mode
+* El modal debe confirmar claramente qué empleado se va a eliminar
+* Si tiene sentido según el patrón del starter kit, también puedes usar modal para create/edit, pero prioriza respetar la arquitectura actual del proyecto
+
+
+Detalles visuales importantes:
+* Usa spacing consistente entre bloques
+* Evita contenido pegado a bordes
+* Evita tablas sin wrapper visual
+* Evita formularios sin card o sin estructura
+* Evita botones desalineados
+* Evita textos sin jerarquía visual
+* Asegúrate de que todo se vea como parte nativa del panel ya existente
+
+
+Feedback y estados:
+* Mostrar mensajes o feedback visual para acciones exitosas si el proyecto ya maneja flash messages
+* Mostrar errores de validación correctamente
+* Agregar empty state visualmente agradable en la lista
+* Mantener UX coherente con el starter kit
+
+
+Testing:
+* Crear o actualizar tests con Pest para cubrir al menos:
+  * categories list page loads correctly
+  * categories can be created
+  * categories can be updated
+  * categories can be deleted
+  * validation errors are returned correctly
+
+
+Calidad y verificación:
+* Antes de hacer cambios, revisar la estructura real del proyecto y seguir archivos hermanos
+* No inventar una arquitectura distinta si ya existe una forma establecida
+* Si modificas PHP, ejecutar Pint
+* Ejecutar los tests mínimos necesarios
+* Al finalizar, mostrar un resumen corto con:
+  * archivos creados
+  * archivos modificados
+  * comandos ejecutados
+  * tests ejecutados
+
+
+Importante:
+* Prioriza una implementación que parezca parte real del dashboard existente
+* No entregues solo funcionalidad: quiero una experiencia visual cuidada, integrada y lista para mostrarse en un tutorial

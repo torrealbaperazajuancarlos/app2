@@ -1,0 +1,4 @@
+Este proyecto ya tiene convenciones, AGENTS.md, skills y configuración de OpenCode. Debes respetarlas.
+Dentro de la página home hay una sección llamada comunidad "Lo que dicen nuestros lectores", ahora hay tres comentarios 
+quiero un carrusel para ver más comentarios, realiza el cambio, debes incluir 8 comentarios "inventados" con su título, 
+comentario y el nombre y apellido.

@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Models;
+
+use Database\Factories\CategoryFactory;
+use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
+#[Fillable(['name'])]
+class Category extends Model
+{
+    /** @use HasFactory<CategoryFactory> */
+    use HasFactory;
+
+    /**
+     * Get the books for the category.
+     */
+    public function books(): HasMany
+    {
+        return $this->hasMany(Book::class);
+    }
+
+    protected static function booted(): void
+    {
+        static::deleting(function (Category $category): void {
+            $category->books()->each(fn (Book $book) => $book->delete());
+        });
+    }
+}
